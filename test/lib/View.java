@@ -1,6 +1,8 @@
 package test.lib;
 
-public class View {
+import test.comp.Frame;
+
+public class View  {
     private Frame frame;
     public View(){
         frame = new Frame("title");
