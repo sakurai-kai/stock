@@ -2,11 +2,23 @@ package test.comp;
 
 import java.awt.Graphics;
 
-public abstract class Particle {
-    protected double mass; 
-    protected double[] xyz;
+import test.comp.Display.Panel;
 
-    public abstract void paint(Graphics g , double[][] rot , double rate);
+import java.awt.Color;
+
+public abstract class Particle {
+    protected Color color = new Color(50,200,100);
+    protected double mass; 
+    protected double[] xyz = new double[3];
+
+    protected Particle(double x,double y,double z,double mass){
+        this.mass = mass;
+        this.xyz[0] = x;
+        this.xyz[1] = y;
+        this.xyz[2] = z;
+
+    }
+    public abstract void paint(Graphics g,Panel panel);
 
     
 }

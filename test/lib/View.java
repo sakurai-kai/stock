@@ -1,11 +1,14 @@
 package test.lib;
 
-import test.comp.Frame;
+import test.comp.Control;
+import test.comp.Display;
 
 public class View  {
-    private Frame frame;
+    private Control con;
+    private Display dis;
     public View(){
-        frame = new Frame("title");
-        frame.print();
+        this.con = new Control("control panel");
+        this.dis = new Display("display");
+        con.print();
     }
 }
